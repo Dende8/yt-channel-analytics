@@ -22,7 +22,6 @@ from .dates import parse_rfc3339
 _DURATION_RE = re.compile(r"^P(?:(\d+)D)?(?:T(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?)?$")
 
 # Hasta esta fecha los Shorts duraban como máximo 60 s; desde ella, hasta 180 s.
-# (Dato de memoria: verifícalo si la precisión de la clasificación es crítica.)
 SHORTS_LIMIT_CHANGE = datetime(2024, 10, 15, tzinfo=timezone.utc)
 SHORTS_MAX_SECONDS_BEFORE = 60
 SHORTS_MAX_SECONDS_AFTER = 180

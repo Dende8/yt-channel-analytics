@@ -106,7 +106,6 @@ CHANNEL_REPORTS: tuple[ReportSpec, ...] = (
         "content_type", "channel", ("views", "estimatedMinutesWatched"),
         ("creatorContentType",), "-views",
     ),
-    # --- Nuevos ---
     # Evolución diaria por tipo de contenido (Shorts / vídeo / directo) y año.
     ReportSpec(
         "content_type_daily", "channel", ("views", "estimatedMinutesWatched"),
