@@ -135,12 +135,10 @@ VIDEO_REPORTS: tuple[ReportSpec, ...] = (
         ("elapsedVideoTimeRatio",), "elapsedVideoTimeRatio",
     ),
     ReportSpec("revenue_totals", "video", REVENUE_METRICS, is_revenue=True),
-    # --- Nuevos ---
     # Ingresos día a día por vídeo: permite medir los primeros 7/28 días de cada
     # vídeo y evita el sesgo de los publicados antes de la monetización.
     ReportSpec("revenue_daily", "video", REVENUE_METRICS, ("day",), "day", is_revenue=True),
-    # Audiencia por país (vistas y minutos) y su ingreso, para contrastar la
-    # hipótesis de que el RPM depende del origen de la audiencia.
+    # Audiencia por país (vistas y minutos) y su ingreso.
     ReportSpec(
         "country", "video", ("views", "estimatedMinutesWatched"),
         ("country",), "-views",

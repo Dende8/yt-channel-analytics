@@ -21,7 +21,7 @@ from .dates import parse_rfc3339
 
 _DURATION_RE = re.compile(r"^P(?:(\d+)D)?(?:T(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?)?$")
 
-# Hasta esta fecha los Shorts duraban como máximo 60 s; desde ella, hasta 180 s.
+# Hasta el 14/10/2024 los Shorts duraban como máximo 60 s; desde el 15/10/2024, hasta 180 s, según la ayuda oficial de YouTube.
 SHORTS_LIMIT_CHANGE = datetime(2024, 10, 15, tzinfo=timezone.utc)
 SHORTS_MAX_SECONDS_BEFORE = 60
 SHORTS_MAX_SECONDS_AFTER = 180
