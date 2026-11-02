@@ -1,7 +1,7 @@
 """Previsión a 7 días de un vídeo largo a partir de los minutos de sus dos primeros días."""
 
 import sys
-from datetime import date, datetime, time
+from datetime import datetime, time
 from pathlib import Path
 
 import pandas as pd
@@ -46,6 +46,10 @@ with st.form("formulario"):
     col_d1, col_d2 = st.columns(2)
     min_dia1 = col_d1.number_input("Minutos visualizados el día 1", min_value=0.0, value=0.0, step=10.0)
     min_dia2 = col_d2.number_input("Minutos visualizados el día 2", min_value=0.0, value=0.0, step=10.0)
+    st.caption(
+        "Introduce los minutos de cada día por separado, no el acumulado. Si en YouTube Studio consultas el rango "
+        "de los dos días, el día 2 es ese total menos los minutos del día 1."
+    )
     enviado = st.form_submit_button("Calcular previsión")
 
 if not enviado:
