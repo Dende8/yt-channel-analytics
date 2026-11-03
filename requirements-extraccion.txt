@@ -1,6 +1,6 @@
 -r requirements.txt
-google-auth>=2.29
-google-auth-httplib2>=0.2
-google-api-python-client>=2.120
-python-dotenv>=1.0
-requests>=2.31
+google-auth==2.62.0
+google-auth-httplib2==0.4.4
+google-api-python-client==2.201.0
+python-dotenv==1.2.4
+requests==2.34.2
