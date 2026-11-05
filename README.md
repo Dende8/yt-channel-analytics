@@ -1,7 +1,5 @@
 # Puro Balompié: previsión de rendimiento de vídeos largos
 
-Proyecto final del bootcamp de Datos e IA de Upgrade Hub: «De los datos a una aplicación real».
-
 Con los datos de los dos primeros días de un vídeo largo del canal de YouTube **Puro Balompié**, el proyecto estima cuántos minutos visualizados acumulará en sus 7 primeros días, con un rango de valores razonables, y permite compararlo con el histórico reciente del canal. Incluye el análisis completo (cuadernos) y una aplicación web local en Streamlit.
 
 ---
