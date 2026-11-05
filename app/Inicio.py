@@ -36,7 +36,7 @@ st.page_link(
     label="Analizar un vídeo",
     help="Introduce las horas (minutos) de los dos primeros días y obtén la previsión a 7 días.",
 )
-st.caption("Introduce los minutos de los dos primeros días de un vídeo y obtén la previsión a 7 días con su rango.")
+st.caption("Introduce las horas (minutos) de los dos primeros días de un vídeo y obtén la previsión a 7 días con su rango.")
 st.page_link(
     "pages/2_Panel_del_canal.py",
     label="Panel del canal",
