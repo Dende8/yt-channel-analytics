@@ -20,6 +20,9 @@ RUTA_PANEL = RAIZ / "data" / "processed" / "panel_diario.csv"
 # Desde esta fecha YouTube cuenta como visualización la reproducción desde el primer fotograma
 FECHA_CAMBIO_VISUALIZACION = pd.Timestamp("2026-08-24")
 
+# Población del modelo: los dos vídeos de 2017 son casos aislados y quedan fuera, como en el cuaderno 03
+FECHA_INICIO_MODELO = pd.Timestamp("2025-01-01", tz="UTC")
+
 # Resultados del cuaderno 03_modelo (sección 17), evaluados con los 64 vídeos más recientes
 RESULTADOS_PRUEBA = pd.DataFrame(
     {
@@ -91,6 +94,10 @@ def cargar_paquete_modelo() -> dict:
 
 
 def largos_con_ventana_7d(maestra: pd.DataFrame) -> pd.DataFrame:
-    """Vídeos largos con los 7 primeros días completos, ordenados por fecha de publicación."""
-    largos = maestra[(maestra["formato"] == "long") & maestra["minutos_7d"].notna()]
+    """Vídeos largos con los 7 primeros días completos publicados desde 2025, ordenados por fecha."""
+    largos = maestra[
+        (maestra["formato"] == "long")
+        & maestra["minutos_7d"].notna()
+        & (maestra["published_at"] >= FECHA_INICIO_MODELO)
+    ]
     return largos.sort_values("published_at").reset_index(drop=True)

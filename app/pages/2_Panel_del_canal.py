@@ -39,8 +39,8 @@ figura.add_scatter(
     x=mensual["mes"], y=mensual["mediana_por_video"], name="Mediana por vídeo", yaxis="y2", line=dict(color="#d95f02")
 )
 figura.update_layout(
-    yaxis=dict(title="Minutos totales"),
-    yaxis2=dict(title="Mediana por vídeo", overlaying="y", side="right"),
+    yaxis=dict(title="Minutos totales", rangemode="tozero"),
+    yaxis2=dict(title="Mediana por vídeo", overlaying="y", side="right", rangemode="tozero"),
     legend=dict(orientation="h", y=1.12),
     margin=dict(l=10, r=10, t=10, b=10),
     height=360,
