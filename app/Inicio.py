@@ -34,7 +34,7 @@ st.subheader("Qué se puede hacer")
 st.page_link(
     "pages/1_Analizar_un_video.py",
     label="Analizar un vídeo",
-    help="Introduce los minutos de los dos primeros días y obtén la previsión a 7 días.",
+    help="Introduce las horas (minutos) de los dos primeros días y obtén la previsión a 7 días.",
 )
 st.caption("Introduce los minutos de los dos primeros días de un vídeo y obtén la previsión a 7 días con su rango.")
 st.page_link(
